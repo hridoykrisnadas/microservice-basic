@@ -1,0 +1,21 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: API-Gateway
+  cloud:
+    gateway:
+        routes:
+          - id: User-Service
+            uri: lb://User-Service
+            predicates:
+              - Path=/user/**
+          - id: Book-Service
+            uri: lb://Book-Service
+            predicates:
+              - Path=/book/**
+
+
+eureka:
+  instance:
+    hostname: localhost

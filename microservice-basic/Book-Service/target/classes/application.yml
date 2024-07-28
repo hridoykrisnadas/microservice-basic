@@ -1,0 +1,24 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: Book Service
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/book_service?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        globally_quoted_identifiers: true
+eureka:
+  instance:
+    hostname: localhost

@@ -1,0 +1,11 @@
+User Service
+	port: 8091
+
+Book Service
+	port: 8092
+
+Eureka Server
+	port: 8761
+
+API Gateway
+	port: 8090
